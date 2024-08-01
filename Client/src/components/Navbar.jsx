@@ -15,7 +15,7 @@ export default function Navbar() {
                 <div className="flex items-center justify-between mx-auto max-w-screen-xl">
                     <Link to="/" className="flex items-center">
                         <img
-                            src="https://i.postimg.cc/5yzJFyrz/LHD-Human-Care-Logo-1-removebg-preview.png"
+                            src="https://i.postimg.cc/MZLYSJFT/garbage-trash-svgrepo-com-removebg-preview.png"
                             className="h-16"
                             alt="Logo"
                         />
@@ -26,7 +26,7 @@ export default function Navbar() {
                             <li>
                                 <NavLink to='/'
                                     className={({ isActive }) =>
-                                        `block py-2 px-4 rounded duration-200 ${isActive ? "text-amber-500" : "text-white"} hover:bg-gray-50 hover:text-orange-400`
+                                        `block py-2 px-4 rounded duration-200 ${isActive ? "text-lime-400" : "text-white"} hover:bg-gray-50 hover:text-orange-400`
                                     }
                                 >
                                     Home
@@ -35,7 +35,7 @@ export default function Navbar() {
                             <li>
                                 <NavLink to='/profile'
                                     className={({ isActive }) =>
-                                        `block py-2 px-4 rounded duration-200 ${isActive ? "text-amber-500" : "text-white"} hover:bg-gray-50 hover:text-orange-400`
+                                        `block py-2 px-4 rounded-2xl duration-200 ${isActive ? "text-amber-500" : "text-white"} hover:bg-gray-50 hover:text-orange-400`
                                     }
                                 >
                                     About Us
@@ -51,18 +51,18 @@ export default function Navbar() {
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to='/products'
+                                <NavLink to='rates'
                                     className={({ isActive }) =>
-                                        `block py-2 px-4 rounded duration-200 bg-lime-700 ${isActive ? "text-lime-500" : "text-white"} hover:text-orange-400`
+                                        `block py-2 px-4 rounded-2xl duration-200 bg-lime-700 ${isActive ? "text-lime-500" : "text-white"} hover:text-orange-400`
                                     }
                                 >
                                     Check Our Rate List
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to='/contact'
+                                <NavLink to='/scrap'
                                     className={({ isActive }) =>
-                                        `block py-2 px-4 rounded duration-200 bg-lime-700 ${isActive ? "text-amber-500" : "text-white"} hover:bg-gray-50 hover:text-orange-400`
+                                        `block py-2 px-4 rounded-2xl duration-200 bg-lime-700 ${isActive ? "text-amber-500" : "text-white"} hover:bg-gray-50 hover:text-orange-400`
                                     }
                                 >
                                     Sell Your Scrap

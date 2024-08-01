@@ -29,13 +29,13 @@ const LandingPage = () => {
             style={{ backgroundImage: `url(${slide.image})` }}
           >
             <div className="flex flex-col items-center justify-center h-full p-8 bg-black bg-opacity-50">
-              <h1 className="text-4xl md:text-6xl font-bold mb-4">{slide.content}</h1>
-              <p className="text-lg md:text-2xl mb-6">{slide.description}</p>
+              <h1 className="text-4xl md:text-6xl font-bold mb-8">{slide.content}</h1>
+              <p className="text-lg md:text-2xl mb-6 bg-white opacity-75 p-4 rounded-2xl font-bold text-lime-700">{slide.description}</p>
             </div>
           </div>
         ))}
       </div>
-      <button className="relative top-24 text-white bg-lime-700 px-6 py-3 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300">
+      <button className="relative top-32 text-white bg-lime-700 px-6 py-3 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300">
         Sell Your Scrap Now !
       </button>
     </div>
