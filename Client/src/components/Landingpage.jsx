@@ -1,5 +1,6 @@
 // LandingPage.jsx
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import 'tailwindcss/tailwind.css';
 
 const slides = [
@@ -35,9 +36,10 @@ const LandingPage = () => {
           </div>
         ))}
       </div>
-      <button className="relative top-32 text-white bg-lime-700 px-6 py-3 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300">
+     <Link to='/scrap'> <button className="relative top-32 text-white bg-lime-700 px-6 py-3 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300">
         Sell Your Scrap Now !
       </button>
+      </Link>
     </div>
   );
 };

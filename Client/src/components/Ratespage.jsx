@@ -4,27 +4,27 @@ import 'tailwindcss/tailwind.css';
 
 const categories = [
   {
-    name: 'Electronics',
+    name: 'Paper',
     items: [
-      { name: 'Laptop', rate: '$800' },
-      { name: 'Smartphone', rate: '$600' },
-      { name: 'Tablet', rate: '$300' },
+      { name: 'Newspaper', rate: 'Rs.10/kg' },
+      { name: 'Notebook', rate: 'Rs.14/kg' },
+      { name: 'Cardboard', rate: 'Rs.8/kg' },
     ],
   },
   {
     name: 'Furniture',
     items: [
-      { name: 'Sofa', rate: '$400' },
-      { name: 'Dining Table', rate: '$250' },
-      { name: 'Chair', rate: '$50' },
+      { name: 'Sofa', rate: 'Rs.10/kg' },
+      { name: 'Dining Table', rate: 'Rs.10/kg' },
+      { name: 'Chair', rate: 'Rs.10/kg' },
     ],
   },
   {
     name: 'Appliances',
     items: [
-      { name: 'Refrigerator', rate: '$1000' },
-      { name: 'Washing Machine', rate: '$700' },
-      { name: 'Microwave', rate: '$150' },
+      { name: 'Refrigerator', rate: 'Rs.10/kg' },
+      { name: 'Washing Machine', rate: 'Rs.10/kg' },
+      { name: 'Microwave', rate: 'Rs.10/kg' },
     ],
   },
 ];

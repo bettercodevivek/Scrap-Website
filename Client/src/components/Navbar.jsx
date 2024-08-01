@@ -1,17 +1,21 @@
-import React, { useState } from "react";
-import { Link, NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { FiHome, FiUser, FiEye, FiBox, FiMail } from 'react-icons/fi'; // Adding icons
 
 export default function Navbar() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const location = useLocation(); // Get the current location
 
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
     };
 
+    // Check if the current path is the homepage
+    const isHomepage = location.pathname === '/';
+
     return (
-        <header className="fixed bg-transparent top-0 z-50 w-full">
-            <nav className="bg-transparent px-4 lg:px-8 py-2.5">
+        <header className={`fixed top-0 z-50 w-full ${isHomepage ? 'bg-inherit' : 'bg-white'}`}>
+            <nav className={`px-4 lg:px-8 py-2.5 ${isHomepage ? 'bg-inherit' : 'bg-white'}`}>
                 <div className="flex items-center justify-between mx-auto max-w-screen-xl">
                     <Link to="/" className="flex items-center">
                         <img
@@ -26,7 +30,7 @@ export default function Navbar() {
                             <li>
                                 <NavLink to='/'
                                     className={({ isActive }) =>
-                                        `block py-2 px-4 rounded duration-200 ${isActive ? "text-lime-400" : "text-white"} hover:bg-gray-50 hover:text-orange-400`
+                                        `block py-2 px-4 rounded duration-200 ${isActive ? "text-lime-400" : "text-white"} ${isHomepage ? 'hover:text-orange-400' : 'hover:bg-gray-50 hover:text-orange-400'}`
                                     }
                                 >
                                     Home
@@ -35,7 +39,7 @@ export default function Navbar() {
                             <li>
                                 <NavLink to='/profile'
                                     className={({ isActive }) =>
-                                        `block py-2 px-4 rounded-2xl duration-200 ${isActive ? "text-amber-500" : "text-white"} hover:bg-gray-50 hover:text-orange-400`
+                                        `block py-2 px-4 rounded-2xl duration-200 ${isActive ? "text-amber-500" : "text-white"} ${isHomepage ? 'hover:text-orange-400' : 'hover:bg-gray-50 hover:text-orange-400'}`
                                     }
                                 >
                                     About Us
@@ -44,16 +48,16 @@ export default function Navbar() {
                             <li>
                                 <NavLink to='/vision'
                                     className={({ isActive }) =>
-                                        `block py-2 px-4 rounded duration-200 ${isActive ? "text-amber-500" : "text-white"} hover:bg-gray-50 hover:text-orange-400`
+                                        `block py-2 px-4 rounded duration-200 ${isActive ? "text-amber-500" : "text-white"} ${isHomepage ? 'hover:text-orange-400' : 'hover:bg-gray-50 hover:text-orange-400'}`
                                     }
                                 >
                                     Our Vision
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink to='rates'
+                                <NavLink to='/rates'
                                     className={({ isActive }) =>
-                                        `block py-2 px-4 rounded-2xl duration-200 bg-lime-700 ${isActive ? "text-lime-500" : "text-white"} hover:text-orange-400`
+                                        `block py-2 px-4 rounded-2xl duration-200 bg-lime-700 ${isActive ? "text-lime-500" : "text-white"} ${isHomepage ? 'hover:text-orange-400' : 'hover:text-orange-400'}`
                                     }
                                 >
                                     Check Our Rate List
@@ -62,7 +66,7 @@ export default function Navbar() {
                             <li>
                                 <NavLink to='/scrap'
                                     className={({ isActive }) =>
-                                        `block py-2 px-4 rounded-2xl duration-200 bg-lime-700 ${isActive ? "text-amber-500" : "text-white"} hover:bg-gray-50 hover:text-orange-400`
+                                        `block py-2 px-4 rounded-2xl duration-200 bg-lime-700 ${isActive ? "text-amber-500" : "text-white"} ${isHomepage ? 'hover:text-orange-400' : 'hover:text-orange-400'}`
                                     }
                                 >
                                     Sell Your Scrap
