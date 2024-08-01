@@ -14,8 +14,8 @@ export default function Navbar() {
     const isHomepage = location.pathname === '/';
 
     return (
-        <header className={`fixed top-0 z-50 w-full ${isHomepage ? 'bg-inherit' : 'bg-white'}`}>
-            <nav className={`px-4 lg:px-8 py-2.5 ${isHomepage ? 'bg-inherit' : 'bg-white'}`}>
+        <header className={`fixed top-0 z-50 w-full ${isHomepage ? 'bg-inherit' : 'bg-white'} ${isHomepage ? 'text-white' : 'text-lime-600'}`}>
+            <nav className={`px-4 lg:px-8 py-2.5 ${isHomepage ? 'bg-inherit' : 'bg-white'} ${isHomepage ? 'text-white' : 'text-lime-600'}`}>
                 <div className="flex items-center justify-between mx-auto max-w-screen-xl">
                     <Link to="/" className="flex items-center">
                         <img
@@ -30,7 +30,7 @@ export default function Navbar() {
                             <li>
                                 <NavLink to='/'
                                     className={({ isActive }) =>
-                                        `block py-2 px-4 rounded duration-200 ${isActive ? "text-lime-400" : "text-white"} ${isHomepage ? 'hover:text-orange-400' : 'hover:bg-gray-50 hover:text-orange-400'}`
+                                        `block py-2 px-4 rounded duration-200 ${isHomepage ? 'hover:text-orange-400' : 'hover:bg-gray-50 hover:text-orange-400'}`
                                     }
                                 >
                                     Home
@@ -39,7 +39,7 @@ export default function Navbar() {
                             <li>
                                 <NavLink to='/profile'
                                     className={({ isActive }) =>
-                                        `block py-2 px-4 rounded-2xl duration-200 ${isActive ? "text-amber-500" : "text-white"} ${isHomepage ? 'hover:text-orange-400' : 'hover:bg-gray-50 hover:text-orange-400'}`
+                                        `block py-2 px-4 rounded-2xl duration-200  ${isHomepage ? 'hover:text-orange-400' : 'hover:bg-gray-50 hover:text-orange-400'}`
                                     }
                                 >
                                     About Us
@@ -48,7 +48,7 @@ export default function Navbar() {
                             <li>
                                 <NavLink to='/vision'
                                     className={({ isActive }) =>
-                                        `block py-2 px-4 rounded duration-200 ${isActive ? "text-amber-500" : "text-white"} ${isHomepage ? 'hover:text-orange-400' : 'hover:bg-gray-50 hover:text-orange-400'}`
+                                        `block py-2 px-4 rounded duration-200  ${isHomepage ? 'hover:text-orange-400' : 'hover:bg-gray-50 hover:text-orange-400'}`
                                     }
                                 >
                                     Our Vision
