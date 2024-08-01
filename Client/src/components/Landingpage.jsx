@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react';
 import 'tailwindcss/tailwind.css';
 
 const slides = [
-  { id: 1, content: "Welcome to Our Website", description: "Discover amazing features and services.", image: "https://i.postimg.cc/GtWN8w7F/masaaki-komori-y-IHr-Ngky-TGc-unsplash.webp" },
-  { id: 2, content: "Our Services", description: "Explore our range of professional services.", image: "https://i.postimg.cc/kG6zgXcM/michael-schaffler-m-RTJ1jp-H8-XQ-unsplash.webp" },
-  { id: 3, content: "Get In Touch", description: "Contact us for more information and inquiries.", image: "https://i.postimg.cc/1Rb5c8bH/engin-akyurt-M2-W0-J6-Sqi-Sg-unsplash-1.webp" }
+  { id: 1, content: "क्या आपके पास बेचने के लिए कबाड़ है?", description: " हमें कॉल करें ", image: "https://i.postimg.cc/GtWN8w7F/masaaki-komori-y-IHr-Ngky-TGc-unsplash.webp" },
+  { id: 2, content: "कुछ भी बेचें।", description: " पुराने कपड़े, अखबार, किताबें, धातुएं, प्लास्टिक।", image: "https://i.postimg.cc/kG6zgXcM/michael-schaffler-m-RTJ1jp-H8-XQ-unsplash.webp" },
+  { id: 3, content: "और अपने कबाड़ के लिए सबसे अच्छे दाम पाएं।", description: "सिर्फ The Scrappers पे", image: "https://i.postimg.cc/1Rb5c8bH/engin-akyurt-M2-W0-J6-Sqi-Sg-unsplash-1.webp" }
 ];
 
 const LandingPage = () => {
@@ -35,8 +35,8 @@ const LandingPage = () => {
           </div>
         ))}
       </div>
-      <button className="absolute bottom-8 text-white bg-blue-500 px-6 py-3 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300">
-        Learn More
+      <button className="relative top-24 text-white bg-lime-700 px-6 py-3 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300">
+        Sell Your Scrap Now !
       </button>
     </div>
   );

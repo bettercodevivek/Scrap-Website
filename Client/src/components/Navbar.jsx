@@ -10,33 +10,18 @@ export default function Navbar() {
     };
 
     return (
-        <header className="sticky bg-transparent top-0 z-50">
-            <nav className=" bg-transparent px-4 lg:px-8 py-2.5">
+        <header className="fixed bg-transparent top-0 z-50 w-full">
+            <nav className="bg-transparent px-4 lg:px-8 py-2.5">
                 <div className="flex items-center justify-between mx-auto max-w-screen-xl">
                     <Link to="/" className="flex items-center">
                         <img
-                            src=" "
+                            src="https://i.postimg.cc/5yzJFyrz/LHD-Human-Care-Logo-1-removebg-preview.png"
                             className="h-16"
                             alt="Logo"
                         />
-                        <div className="hidden md:flex flex-col items-start ml-4">
-                            <div className="text-lg font-semibold text-white">The Scrappers</div>
-                            <div className="text-sm text-white">Scrap Out, Money In</div>
-                        </div>
                     </Link>
 
-                    <button
-                        onClick={toggleSidebar}
-                        type="button"
-                        className="lg:hidden text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700"
-                        aria-label="toggle menu"
-                    >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isSidebarOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}></path>
-                        </svg>
-                    </button>
-
-                    <div className="hidden lg:flex lg:items-center lg:space-x-8">
+                    <div className="hidden lg:flex flex-1 items-center justify-center space-x-6">
                         <ul className="flex space-x-6 items-center font-medium">
                             <li>
                                 <NavLink to='/'
@@ -62,13 +47,13 @@ export default function Navbar() {
                                         `block py-2 px-4 rounded duration-200 ${isActive ? "text-amber-500" : "text-white"} hover:bg-gray-50 hover:text-orange-400`
                                     }
                                 >
-                                    Contact Us
+                                    Our Vision
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to='/products'
                                     className={({ isActive }) =>
-                                        `block py-2 px-4 rounded duration-200 ${isActive ? "text-amber-500" : "text-white"} hover:bg-gray-50 hover:text-orange-400`
+                                        `block py-2 px-4 rounded duration-200 bg-lime-700 ${isActive ? "text-lime-500" : "text-white"} hover:text-orange-400`
                                     }
                                 >
                                     Check Our Rate List
@@ -77,7 +62,7 @@ export default function Navbar() {
                             <li>
                                 <NavLink to='/contact'
                                     className={({ isActive }) =>
-                                        `block py-2 px-4 rounded duration-200 ${isActive ? "text-amber-500" : "text-white"} hover:bg-gray-50 hover:text-orange-400`
+                                        `block py-2 px-4 rounded duration-200 bg-lime-700 ${isActive ? "text-amber-500" : "text-white"} hover:bg-gray-50 hover:text-orange-400`
                                     }
                                 >
                                     Sell Your Scrap
@@ -85,6 +70,17 @@ export default function Navbar() {
                             </li>
                         </ul>
                     </div>
+
+                    <button
+                        onClick={toggleSidebar}
+                        type="button"
+                        className="lg:hidden text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700"
+                        aria-label="toggle menu"
+                    >
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isSidebarOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}></path>
+                        </svg>
+                    </button>
                 </div>
             </nav>
 
